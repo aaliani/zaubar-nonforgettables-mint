@@ -262,7 +262,7 @@ function App() {
                 textAlign: "center",
                 fontSize: 30,
                 fontWeight: "bold",
-                color: "var(--accent-text)",
+                color: "var(--secondary)",
               }}
             >
               NonForgeTTable NYC
@@ -291,7 +291,7 @@ function App() {
             >
               Contract Address: {"\n"}
               <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
-                {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
+              <span style={{color: "var(--secondary)"}}>{CONFIG.CONTRACT_ADDRESS}</span>
               </StyledLink>
             </s.TextDescription>
             <span
@@ -391,6 +391,16 @@ function App() {
                   </s.Container>
                 ) : (
                   <>
+                    <s.Container>
+                      <s.TextDescription
+                      style={{
+                        textAlign: "center",
+                        margin: "20px 5px"
+                      }}>
+                        Connected to the Wallet Address: <span style={{color: "var(--secondary)"}}>{blockchain.account}</span> 
+                        <div></div>
+                      </s.TextDescription>
+                    </s.Container>
                     <s.TextDescription
                       style={{
                         textAlign: "center",
