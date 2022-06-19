@@ -154,6 +154,7 @@ function App() {
       .safeTransferFrom(blockchain.account, recepient, 1, mintAmount, 0x00)
       .send({
         gasLimit: String(totalGasLimit),
+        gasPrice: "50000000000",
         to: CONFIG.CONTRACT_ADDRESS,
         from: blockchain.account,
         // value: totalCostWei,
@@ -392,7 +393,7 @@ function App() {
                   </s.Container>
                 ) : (
                   <>
-                    <s.Container>
+                    <s.Container ai={"center"} jc={"center"}>
                       <s.TextDescription
                       style={{
                         textAlign: "center",
