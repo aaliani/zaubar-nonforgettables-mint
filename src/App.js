@@ -7,6 +7,7 @@ import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
 import Web3 from "web3";
+import truncateEthAddress from "truncate-eth-address";
 
 const truncate = (input, len) =>
   input.length > len ? `${input.substring(0, len)}...` : input;
@@ -289,9 +290,9 @@ function App() {
                 color: "var(--primary-text)",
               }}
             >
-              Contract Address: {"\n"}
+              Contract Address: <br></br>
               <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
-              <span style={{color: "var(--secondary)"}}>{CONFIG.CONTRACT_ADDRESS}</span>
+              <span style={{color: "var(--secondary)"}}>{truncateEthAddress(CONFIG.CONTRACT_ADDRESS)}</span>
               </StyledLink>
             </s.TextDescription>
             <span
@@ -397,7 +398,8 @@ function App() {
                         textAlign: "center",
                         margin: "20px 5px"
                       }}>
-                        Connected to the Wallet Address: <span style={{color: "var(--secondary)"}}>{blockchain.account}</span> 
+                        Connected to the Wallet Address: <br></br> 
+                        <span style={{color: "var(--secondary)"}}>{truncateEthAddress(blockchain.account)}</span> 
                         <div></div>
                       </s.TextDescription>
                     </s.Container>
