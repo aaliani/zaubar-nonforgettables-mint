@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0x984dB17b50A1F082E06aD1ff6246Ea78733900C3",
-  "SCAN_LINK": "https://mumbai.polygonscan.com/address/0x984db17b50a1f082e06ad1ff6246ea78733900c3",
+  "CONTRACT_ADDRESS": "0xb647d4ad96a72A8A86D9dB94F89070DcF65AD8f1",
+  "SCAN_LINK": "https://mumbai.polygonscan.com/address/0xb647d4ad96a72A8A86D9dB94F89070DcF65AD8f1",
   "NETWORK": {
     "NAME": "Polygon",
     "SYMBOL": "Matic",
     "ID" : 80001
   },
-  "NFT_NAME": "ZAUBAR's NonForgeTTables",
+  "NFT_NAME": "ZAUBAR's NonForgeTTable NYC",
   "SYMBOL": "NFTT",
-  "MAX_SUPPLY": 100,
+  "MAX_SUPPLY": 99,
   "WEI_COST": 0,
   "DISPLAY_COST": 0,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/unidentified-contract-soreapwvas",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/assets/mumbai/0xb647d4ad96a72A8A86D9dB94F89070DcF65AD8f1/1",
   "SHOW_BACKGROUND": true
 }

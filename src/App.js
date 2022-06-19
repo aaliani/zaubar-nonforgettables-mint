@@ -141,7 +141,8 @@ function App() {
     let gasLimit = CONFIG.GAS_LIMIT;
     let totalCostWei = String(cost * mintAmount);
     let totalGasLimit = String(gasLimit * mintAmount);
-    if (!Web3.utils.isAddress(recepient)) {
+    let isAddress = Web3.utils.isAddress(recepient);
+    if (!isAddress) {
       return setFeedback(`Please enter a correct address`);
     }
     console.log("Cost: ", totalCostWei);
@@ -164,7 +165,7 @@ function App() {
       .then((receipt) => {
         console.log(receipt);
         setFeedback(
-          `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`
+          `WOW, the ${CONFIG.NFT_NAME} is yours! Click the OpenSea button and login to view it.`
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
@@ -220,9 +221,9 @@ function App() {
         style={{ padding: 24, backgroundColor: "var(--primary)" }}
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
       >
-        <a href={CONFIG.MARKETPLACE_LINK}>
+        <a href={CONFIG.MARKETPLACE_LINK} target="_blank" >
           <StyledLogo alt={"logo"} src={"/config/images/zaubar-logo.png"} />
-          <s.TextTitle>ZAUBAR's NonForgeTTables</s.TextTitle>
+          <s.TextTitle style={{ fontSize: 30, padding: 14 }} >ZAUBAR's NonForgeTTables</s.TextTitle>
         </a>
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
@@ -240,15 +241,35 @@ function App() {
               borderRadius: 24,
               border: "4px dashed var(--secondary)",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
+              maxWidth: "50em",
             }}
           >
-            <Player
-              poster="/assets/poster.png"
-              autoPlay
-              preload="auto"
-              src="https://ipfs.infura.io/ipfs/bafybeielqzgxwy6t5ipfj6itnpb7bmz67cqo47uwzepzvarkp5i364vpcq"
-            />
-            <div style={{padding: 20 }}></div>
+            <s.Container
+              jc={"center"}
+              ai={"center"}
+              style={{
+                maxWidth: "30em",
+              }}
+            >
+              <Player
+                poster="/assets/poster.png"
+                autoPlay
+                preload="auto"
+                src="https://ipfs.infura.io/ipfs/bafybeih6hlilmiuhfn3vj65k3rjirt7xem4mzliny6wulyfxylvlxyqr4i"
+              />
+              <s.TextTitle
+              style={{
+                textAlign: "center",
+                fontSize: 30,
+                fontWeight: "bold",
+                color: "var(--accent-text)",
+              }}
+            >
+              NonForgeTTable NYC
+            </s.TextTitle>
+            </s.Container>
+
+            <div style={{ padding: 20 }}></div>
             <s.TextSubTitle style={{ textAlign: "center" }}>
               Available Amount on Sender's Address
             </s.TextSubTitle>
@@ -385,6 +406,7 @@ function App() {
                       onClick={(e) => {
                         e.preventDefault();
                         setRecepient(document.getElementById("receiver").value);
+                        Web3.utils.isAddress(recepient);
                         setFeedback(
                           `sending from ${blockchain.account} to ${recepient}...`
                         );
