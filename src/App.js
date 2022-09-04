@@ -225,7 +225,7 @@ function App() {
       >
         <a href={CONFIG.MARKETPLACE_LINK} target="_blank" >
           <StyledLogo alt={"logo"} src={"/config/images/zaubar-logo.png"} />
-          <s.TextTitle style={{ fontSize: 30, padding: 14 }} >ZAUBAR's NonForgeTTables</s.TextTitle>
+          <s.TextTitle style={{ fontSize: 30, padding: 14 }} >ZAUBAR @ XPRO</s.TextTitle>
         </a>
         <s.SpacerSmall />
         <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
@@ -257,7 +257,7 @@ function App() {
                 poster="/assets/poster.png"
                 autoPlay
                 preload="auto"
-                src="https://ipfs.infura.io/ipfs/bafybeih6hlilmiuhfn3vj65k3rjirt7xem4mzliny6wulyfxylvlxyqr4i"
+                src="https://ipfs.infura.io/ipfs/bafybeifg7ynfow7ot6dcpyiuctpaaztyaig45qv3cprmgxgott7jn3gntu"
               />
               <s.TextTitle
               style={{
@@ -267,7 +267,7 @@ function App() {
                 color: "var(--secondary)",
               }}
             >
-              NonForgeTTable NYC
+              NonForgetable XPRO
             </s.TextTitle>
             </s.Container>
 

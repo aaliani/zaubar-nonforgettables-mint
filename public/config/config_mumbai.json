@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0xb4a772eac511bd3ba8e106e5869e91d3c91b62ea",
+  "SCAN_LINK": "https://mumbai.polygonscan.com/address/0xb4a772eac511bd3ba8e106e5869e91d3c91b62ea",
+  "NETWORK": {
+    "NAME": "Mumbai",
+    "SYMBOL": "Matic",
+    "ID" : 80001
+  },
+  "NFT_NAME": "ZAUBAR x XPRO",
+  "SYMBOL": "XPRO",
+  "MAX_SUPPLY": 99,
+  "WEI_COST": 0,
+  "DISPLAY_COST": 0,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/assets/mumbai/0xb4a772eac511bd3ba8e106e5869e91d3c91b62ea/1",
+  "SHOW_BACKGROUND": true
+}

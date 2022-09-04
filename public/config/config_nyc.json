@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x26CBB84946169555C6f76F94DE644A34fC6A760b",
+  "SCAN_LINK": "https://polygonscan.com/address/0x26CBB84946169555C6f76F94DE644A34fC6A760b",
+  "NETWORK": {
+    "NAME": "Polygon",
+    "SYMBOL": "Matic",
+    "ID" : 137
+  },
+  "NFT_NAME": "ZAUBAR's NonForgeTTable NYC",
+  "SYMBOL": "NFTT",
+  "MAX_SUPPLY": 99,
+  "WEI_COST": 0,
+  "DISPLAY_COST": 0,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://opensea.io/assets/matic/0x26CBB84946169555C6f76F94DE644A34fC6A760b/1",
+  "SHOW_BACKGROUND": true
+}
